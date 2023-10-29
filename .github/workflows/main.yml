@@ -28,4 +28,4 @@ jobs:
             mkdir ip ~/.ssh && touch ~/.ssh/known_hosts
             ssh-keyscan -t rsa ec2-34-224-223-235.compute-1.amazonaws.com >> ~/.ssh/known_hosts
             chmod 400 cicdpipeline.pem
-            scp -i "cicdpipeline.pem" build/ ubuntu@ec2-34-224-223-235.compute-1.amazonaws.com:/var/www.html
+            scp -i "cicdpipeline.pem" -r build/ ubuntu@ec2-34-224-223-235.compute-1.amazonaws.com:/var/www.html
